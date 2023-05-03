@@ -168,7 +168,7 @@ class Knight(Piece):
             new_col = self.get_col_number() + col_change[i]
             evaluating_square = game_state.get_piece(new_row, new_col)
             # when the square with new_row and new_col contains a valid piece and the player is different
-            if game_state.is_valid_piece(new_row, new_col) and self.get_player() is not evaluating_square.get_player():
+            if game_state.is_valid_piece(new_row, new_col) and self.get_player() != evaluating_square.get_player():
                 _moves.append((new_row, new_col))
         return _moves
 

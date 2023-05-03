@@ -231,14 +231,6 @@ class game_state:
             return 3
 
     def get_all_legal_moves(self, player):
-        # _all_valid_moves = [[], []]
-        # for row in range(0, 8):
-        #     for col in range(0, 8):
-        #         if self.is_valid_piece(row, col) and self.get_piece(row, col).is_player(player):
-        #             valid_moves = self.get_valid_moves((row, col))
-        #             if valid_moves:
-        #                 _all_valid_moves[0].append((row, col))
-        #                 _all_valid_moves[1].append(valid_moves)
         _all_valid_moves = []
         for row in range(0, 8):
             for col in range(0, 8):
@@ -297,11 +289,7 @@ class game_state:
     # have to fix en passant for ai
     def can_en_passant(self, current_square_row, current_square_col):
         return False
-        # if is_ai:
-        #     return False
-        # else:
-        #     return self.can_en_passant_bool and current_square_row == self.previous_piece_en_passant()[0] \
-        #            and abs(current_square_col - self.previous_piece_en_passant()[1]) == 1
+
 
     def previous_piece_en_passant(self):
         return self._en_passant_previous
