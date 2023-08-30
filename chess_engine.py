@@ -854,6 +854,9 @@ class game_state:
                     # self._is_check = True
                     _checks.append((king_location_row + row_change[i], king_location_col + col_change[i]))
         # print([_checks, _pins, _pins_check])
+        # fix bug
+
+
         return [_pins_check, _pins, _pins_check]
 
 
